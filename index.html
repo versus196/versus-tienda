@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Versus Tienda</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header>
+    <h1>Versus Tienda</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#nosotros">Sobre Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#carrito">Carrito</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <h2>¡Bienvenido a Versus Tienda!</h2>
+    <p>Tu tienda especializada en cartas coleccionables y figuras Funko Pop.</p>
+    <img src="https://via.placeholder.com/800x300?text=Versus+Tienda+Banner" class="banner" alt="Banner" />
+  </section>
+
+  <section id="productos">
+    <h2>Productos Destacados</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="https://via.placeholder.com/200x200?text=Cartas+Magic" alt="Cartas Magic">
+        <h3>Cartas Magic</h3>
+        <p>$20.00</p>
+        <button onclick="addToCart('Cartas Magic', 20.00)">Añadir al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/200x200?text=Funko+Pop+Lorcana" alt="Funko Pop Lorcana">
+        <h3>Funko Lorcana</h3>
+        <p>$25.00</p>
+        <button onclick="addToCart('Funko Lorcana', 25.00)">Añadir al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/200x200?text=Cartas+Lorcana" alt="Cartas Lorcana">
+        <h3>Cartas Lorcana</h3>
+        <p>$18.00</p>
+        <button onclick="addToCart('Cartas Lorcana', 18.00)">Añadir al carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>Versus Tienda es una tienda apasionada por el coleccionismo y los juegos de cartas. ¡Ofrecemos productos originales y entregas a todo el país!</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>📍 Dirección: Calle Ficticia 123, Ciudad</p>
+    <p>📞 Teléfono: +00 000 000 000</p>
+    <p>📧 Email: contacto@versustienda.com</p>
+    <div class="social">
+      <a href="https://wa.me/0000000000" target="_blank">💬 WhatsApp</a>
+      <a href="https://www.instagram.com/versustienda" target="_blank">📸 Instagram</a>
+      <a href="https://www.facebook.com/versustienda" target="_blank">📘 Facebook</a>
+    </div>
+  </section>
+
+  <section id="carrito">
+    <h2>Tu carrito</h2>
+    <div id="cart-items"></div>
+    <p>Total: $<span id="cart-total">0.00</span></p>
+    <div id="wallet_container"></div>
+    <div id="paypal-button-container"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 Versus Tienda. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://sdk.mercadopago.com/js/v2"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+  <script src="script.js"></script>
+</body>
+</html>
